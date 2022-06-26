@@ -1,0 +1,15 @@
+{
+    "name": "toni/zavrsni_projekat",
+    "autoload": {
+        "psr-4": {
+            "Toni\\ZavrsniProjekat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antonije Nojic",
+            "email": "antonijenojic01@gmail.com"
+        }
+    ],
+    "require": {}
+}
