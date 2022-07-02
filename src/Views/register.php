@@ -6,15 +6,15 @@
 <div class="register-form">
     
     <form action="index.php?page=register" method="POST">
-        Full name:<br />
+        <p>Full name:</p><br />
         <input type="text" name="fullName" placeholder="Enter your full name"/><br />
-        Username:<br />
+        <p>Username:</p><br />
         <input type="text" name="username" placeholder="Enter your username"/><br />
-        Email:<br />
+        <p>Email:</p><br />
         <input type="text" name="email" placeholder="Enter your email"/><br />
-        Password:<br />        
+        <p>Password:</p><br />        
         <input type="password" name="password" placeholder="Enter password"/><br />
-        Confirm password:  <br />       
+        <p>Confirm password:</p><br />       
         <input type="password" name="passwordConfirm" placeholder="Confirm password"/><br /><br /> 
 
         <div class="error"><p><?php echo $errors;?></p></div>

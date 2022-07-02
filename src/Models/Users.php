@@ -5,18 +5,13 @@ namespace Toni\ZavrsniProjekat\Models;
 
 class Users extends Common {
 
-    public function get() {
+    public function getByUsernameAndPassword($username, $password) {
 
-        $sql = "SELECT * FROM `users`;";
-
+        $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password';";
+        
         $result = $this->query($sql);
 
-        $users = [];
-        while($row = mysqli_fetch_assoc($result)) {
-            $users[] = $row;
-        }
-
-        return $users;
+        return \mysqli_fetch_assoc($result);
     }
 
     public function insert($data) {
@@ -31,12 +26,6 @@ class Users extends Common {
         $this->query($sql);
     }
 
-    public function delete($id) {
-
-        $sql = "DELETE FROM `users` WHERE id = $id";
-
-        $this->query($sql);
-    }
 }
 
 

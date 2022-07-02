@@ -40,7 +40,11 @@ switch($_GET['page']) {
            
     case "login":
         $page = new Login();
-        $page->index();
+        if(count($_POST) == 0) {
+            $page->index();
+        } else {
+            $page->login();
+        }
         break;    
 
     default:

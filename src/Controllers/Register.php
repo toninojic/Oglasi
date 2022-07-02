@@ -4,6 +4,7 @@ namespace Toni\ZavrsniProjekat\Controllers;
 
 
 use Toni\ZavrsniProjekat\Models\Users;
+use Toni\ZavrsniProjekat\Services\Auth\Security;
 
 
 class Register {
@@ -21,10 +22,12 @@ class Register {
 
     public function storeUser() {
 
+        $securityService = new Security();
+
         $errors = '';
 
 
-        if(!$this->validatePassword()) {
+        if(!$securityService->validatePassword()) {
             
             $errors = 'You have entered wrong password';
 
@@ -50,19 +53,5 @@ class Register {
     }
 
 
-    protected function validatePassword(): bool {
 
-        if(strlen($_POST['password']) < 4) {
-            return false ;
-
-        }
-
-        if($_POST['password'] != $_POST['passwordConfirm']) {
-            return false;
-        }    
-
-
-        return true;
-        
-     }
 }
