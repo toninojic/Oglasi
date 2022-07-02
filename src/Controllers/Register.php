@@ -12,6 +12,8 @@ class Register {
     
     public function index() {
 
+        $securityService = new Security();
+
         $errors = '';
 
 

@@ -1,4 +1,5 @@
 <?php 
+session_start();
 ini_set('display_errors','On');
 
 // Controllers
@@ -7,6 +8,9 @@ use Toni\ZavrsniProjekat\Controllers\AboutUs;
 use Toni\ZavrsniProjekat\Controllers\Contact;
 use Toni\ZavrsniProjekat\Controllers\Login;
 use Toni\ZavrsniProjekat\Controllers\Register;
+use Toni\ZavrsniProjekat\Controllers\Logout;
+
+use Toni\ZavrsniProjekat\Services\Auth\Security;
 
 require 'vendor/autoload.php';
 
@@ -45,7 +49,12 @@ switch($_GET['page']) {
         } else {
             $page->login();
         }
-        break;    
+        break;   
+    
+    case "logout":
+        $page = new Logout();
+        $page->index();
+        break;
 
     default:
         $page = new Home();

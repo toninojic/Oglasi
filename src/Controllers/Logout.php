@@ -1,19 +1,18 @@
 <?php
 
-
 namespace Toni\ZavrsniProjekat\Controllers;
 
 use Toni\ZavrsniProjekat\Services\Auth\Security;
 
+class Logout {
 
-class Contact {
-    
     public function index() {
 
         $securityService = new Security();
 
-        include('src/Views/header.php');
-        include('src/Views/contact.php');
-        include('src/Views/footer.php');
+
+        \session_unset();
+        \session_destroy();
+        Header('Location: index.php');
     }
 }

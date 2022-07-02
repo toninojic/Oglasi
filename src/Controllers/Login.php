@@ -9,6 +9,8 @@ class Login {
     
     public function index() {
 
+        $securityService = new Security();
+
         $errors = '';
 
         include ('src/Views/header.php');
@@ -33,6 +35,7 @@ class Login {
             Header('Location: index.php'); // do redirect
 
         } else {
+
             // login failed
             $errors = 'You have entered wrong username/password';        
 
