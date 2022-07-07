@@ -175,6 +175,9 @@ body {
     opacity: 0.8;
 }
 
+.contact-form {
+    display: inline-block;
+}
 
 
 .footer {

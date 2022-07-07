@@ -8,6 +8,7 @@ use Toni\ZavrsniProjekat\Controllers\AboutUs;
 use Toni\ZavrsniProjekat\Controllers\Contact;
 use Toni\ZavrsniProjekat\Controllers\Login;
 use Toni\ZavrsniProjekat\Controllers\Register;
+use Toni\ZavrsniProjekat\Controllers\PostAd;
 use Toni\ZavrsniProjekat\Controllers\Logout;
 
 use Toni\ZavrsniProjekat\Services\Auth\Security;
@@ -29,8 +30,22 @@ switch($_GET['page']) {
 
     case "contact":
         $page = new Contact();
-        $page->index();
+        if(count($_POST) == 0) {
+            $page->index();
+        } else {
+            $page->contact();
+        }
         break;
+
+    case "post-ad":
+        $page = new PostAd();
+        if(count($_POST) == 0) {
+            $page->index();
+        } else {
+            $page->storeAd();
+        }
+        break;
+                
         
     case "register":
         $page = new Register();

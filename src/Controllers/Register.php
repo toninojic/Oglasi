@@ -48,12 +48,10 @@ class Register {
             $userModel = new Users();
             $userModel->insert($userData);
 
-            include('src/Views/header.php');
-            include('src/Views/register.php');
-            include('src/Views/footer.php');
-        }
+            $_SESSION['logged_in'] = true;
+            $_SESSION['username'] = "$userData[username]";
+            Header('Location: index.php'); // do redirect
     }
 
-
-
+}
 }

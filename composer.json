@@ -11,5 +11,7 @@
             "email": "antonijenojic01@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpmailer/phpmailer": "^6.6"
+    }
 }

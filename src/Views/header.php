@@ -23,6 +23,9 @@
                 if($securityService->isLoggedIn()) {
                 ?>
                     <li>
+                        <a href="index.php?page=post-ad">Post Ad</a>
+                    </li>   
+                    <li>
                         <a href="index.php?page=logout">Logout</a>
                     </li>                                               
                 <?php
