@@ -179,6 +179,11 @@ body {
     display: inline-block;
 }
 
+.error li {
+    color: rgb(190, 38, 38);
+    list-style-type: none;
+    margin: 2px;
+}
 
 .footer {
     background:#a08125;

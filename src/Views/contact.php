@@ -12,10 +12,12 @@
         <input type="text" name="subject" placeholder="Subject">
         <p>Message:</p>
         <textarea name="message" placeholder="Enter your message" id="text-area"></textarea>
-        <div class="error"><p>
-            <?php foreach($errors as $error) {
+        <div class="error">
+            <?php if(count($_POST) > 0) {
+                foreach($errors as $error) {
                 ?> <li> <?php echo $error; ?> </li> <?php }
-                ?></p>
+                }
+                ?>
         </div>
         <input id="login" type="submit" value="Login">
         </form>

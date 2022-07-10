@@ -22,7 +22,7 @@ class Contact {
 
     public function contact() {
 
-        $errors = [];
+        /* $errors = []; */
 
         $securityService = new Security();
 

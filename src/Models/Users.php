@@ -7,7 +7,7 @@ class Users extends Common {
 
     public function getByUsernameAndPassword($username, $password) {
 
-        $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password';";
+        $sql = "SELECT * FROM users WHERE username = '$username' AND password = MD5('$password');";
         
         $result = $this->query($sql);
 
@@ -21,7 +21,7 @@ class Users extends Common {
         $email = $data['email'];
         $password = $data['password'];
 
-        $sql = "INSERT INTO `users` (`id`, `full_name`, `username`, `email`, `password`, `creation_date`) VALUES (NULL, '$fullName', '$username', '$email', '$password', current_timestamp());";
+        $sql = "INSERT INTO `users` (`id`, `full_name`, `username`, `email`, `password`, `creation_date`) VALUES (NULL, '$fullName', '$username', '$email', MD5('$password'), current_timestamp());";
 
         $this->query($sql);
     }

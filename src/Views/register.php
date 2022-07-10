@@ -10,7 +10,13 @@
         <input type="password" name="password" placeholder="Enter password"/>
         <p>Confirm password:</p>      
         <input type="password" name="passwordConfirm" placeholder="Confirm password"/>
-        <div class="error"><p><?php echo $errors;?></p></div>
+        <div class="error">
+            <?php if(count($_POST) > 0) {
+                foreach($errors as $error) {
+                ?> <li> <?php echo $error; ?> </li> <?php }
+                }
+                ?>
+        </div>
         <input id="register" type="submit" value="Register"/>
         <p>Already have an account? Please <a href="index.php?page=login">login</a> here.</p>
     </form>

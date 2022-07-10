@@ -20,7 +20,7 @@ class Security {
 
 
     
-    public function validatePassword(): bool {
+/*     public function validatePassword(): bool {
 
         if(strlen($_POST['password']) < 6) {
             return false;
@@ -31,7 +31,7 @@ class Security {
         }
 
         return true;
-    }    
+    }   */  
 
     public function isLoggedIn() {
 
