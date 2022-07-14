@@ -7,7 +7,12 @@
     <textarea name="description" placeholder="Enter your ad content" class="new-ad"></textarea>
     <p>Photo:</p>
     <input type="file" name="myFile" /><br /><br />
-
-    <!-- <div class="error"><?php echo $errors;?></div> -->
+    <div class="error">
+            <?php if(count($_POST) > 0) {
+                foreach($errors as $error) {
+                ?> <li> <?php echo $error; ?> </li> <?php }
+                }
+                ?>
+        </div>
     <input type="submit" value="Submit"/><br /><br />
     </form>

@@ -1,5 +1,5 @@
-<h2>Contact Us</h2>
 <div class="contact-form">
+    <h2>Contact us:</h2>
     <div class="contact-text">
         This is text about contact form
     </div>

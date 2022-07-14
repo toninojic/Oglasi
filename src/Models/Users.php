@@ -14,6 +14,17 @@ class Users extends Common {
         return \mysqli_fetch_assoc($result);
     }
 
+
+    public function getIdByUsername($username) {
+
+        $sql = "SELECT id FROM users WHERE username = '$username'";
+
+        $result = $this->query($sql);
+        $id = \mysqli_fetch_assoc($result)['id'];        
+
+        return $id;
+    }
+
     public function insert($data) {
 
         $fullName = $data['fullname'];
@@ -24,6 +35,7 @@ class Users extends Common {
         $sql = "INSERT INTO `users` (`id`, `full_name`, `username`, `email`, `password`, `creation_date`) VALUES (NULL, '$fullName', '$username', '$email', MD5('$password'), current_timestamp());";
 
         $this->query($sql);
+
     }
 
 }

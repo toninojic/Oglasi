@@ -8,8 +8,9 @@
 
 
 body {
-
+    padding-top: 100px;
     background-color: rgb(220, 212, 174);
+    height: 3000px;
 }
 
 .header {
@@ -18,7 +19,8 @@ body {
     width: 100%;
     height: 100px;
     text-align: left;
-    position: relative;
+    position: fixed;
+    top: 0;
     
 }
 
@@ -175,9 +177,12 @@ body {
     opacity: 0.8;
 }
 
-.contact-form {
-    display: inline-block;
+/* .contact-form {
+    display: block;
+    position: sticky;
+    top: 0;
 }
+ */
 
 .error li {
     color: rgb(190, 38, 38);

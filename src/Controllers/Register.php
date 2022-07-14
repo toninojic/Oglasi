@@ -29,8 +29,6 @@ class Register {
 
         $registerValidation = new RegistrationForm;
 
-        $errors = '';
-
 
 
         if(count($_POST) > 0) {

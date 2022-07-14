@@ -16,12 +16,14 @@ class RegistrationForm {
             'passwordConfirm' => $_POST['passwordConfirm']
         ];
 
-
-
-        $emailParsed = explode('@', $data['email']);
-        $domainParsed = explode('.', $emailParsed[1]);
-
         $errors = [];
+
+
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            array_push($errors, "Your need to enter valid email");
+
+          }
+
 
         if(strlen($data['fullname']) < 3) {
             array_push($errors, "You need to enter fullname with at least 3 letters");
@@ -31,9 +33,6 @@ class RegistrationForm {
             array_push($errors, "You need to enter username with at least 4 letters");
         } 
 
-         if(count($domainParsed) != 2) {
-            array_push($errors, "Your need to enter valid email");
-        }
  
         if(strlen($data['password']) < 5) {
             array_push($errors, "Your passord needs to be at least 5 letters long");
