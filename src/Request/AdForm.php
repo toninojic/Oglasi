@@ -10,11 +10,10 @@ class AdForm {
 
         $errors = [];
 
+
         if(strlen($heading) < 3) {
             array_push($errors, "Your heading must have at least 3 letters");
         } 
-
-
 
         if(strlen($phoneNumber) < 6) {
             array_push($errors, "You need to enter phone number with at least 6 nubmers");

@@ -8,9 +8,9 @@
 
 
 body {
-    padding-top: 100px;
+    margin-top: 120px;
+    margin-bottom: 100px;
     background-color: rgb(220, 212, 174);
-    height: 3000px;
 }
 
 .header {
@@ -21,7 +21,7 @@ body {
     text-align: left;
     position: fixed;
     top: 0;
-    
+    z-index: 1;
 }
 
 
@@ -87,6 +87,50 @@ body {
     color: white;
     text-decoration: none;
 } 
+
+
+.ad {
+    border: #ccc 1px solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 150px;
+    padding: 10px;
+    position: relative;
+}
+
+.ad a {
+    _position: absolute;
+}
+
+.about_ad {
+    _position: absolute;
+    left: 250px;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .register-form {
     text-align: center;
@@ -177,12 +221,83 @@ body {
     opacity: 0.8;
 }
 
-/* .contact-form {
-    display: block;
-    position: sticky;
-    top: 0;
+
+.post-ad-form {
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 75%);
+    background-color: rgba(0, 0, 0, 0.186);
+    border-radius: 10px;  
 }
- */
+
+
+.post-ad-form p {
+    margin: 8px;
+    font-size: 20px;
+}
+
+.post-ad-form input {
+    width: 270px;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.post-ad-form textarea {
+    width: 300px;
+    height: 100px;
+    padding: 12px 20px;
+    font-size: 17px;
+    border-radius: 8px;
+    resize: none;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+    background-color: #97671e;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #52a11d;
+}
+
+
+.post-ad-form #post {
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    width: 100px;
+    height: 55px;
+    font-size: 18px;
+    background-color: #97671e;
+    color: white;
+}
+
+.post-ad-form #post:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
 
 .error li {
     color: rgb(190, 38, 38);

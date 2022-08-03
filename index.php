@@ -10,12 +10,11 @@ use Toni\ZavrsniProjekat\Controllers\Login;
 use Toni\ZavrsniProjekat\Controllers\Register;
 use Toni\ZavrsniProjekat\Controllers\PostAd;
 use Toni\ZavrsniProjekat\Controllers\Logout;
-
 use Toni\ZavrsniProjekat\Services\Auth\Security;
 
 require 'vendor/autoload.php';
 
-
+// this is 
 if(empty($_GET['page'])) {
     $_GET['page'] = 'home';
 }
