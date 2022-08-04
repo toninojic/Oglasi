@@ -38,6 +38,18 @@ class Users extends Common {
 
     }
 
+    public function getOneById($id) {
+
+        $sql = "SELECT * FROM `users` WHERE id = '$id';";
+
+        $result = $this->query($sql);
+
+        $user = mysqli_fetch_assoc($result);
+
+        return $user;  
+
+    }
+
 }
 
 

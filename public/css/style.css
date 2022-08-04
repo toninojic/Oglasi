@@ -90,45 +90,87 @@ body {
 
 
 .ad {
-    border: #ccc 1px solid;
-    margin-left: 20%;
-    margin-right: 20%;
+    position: relative;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 20px;
     margin-bottom: 20px;
     min-height: 150px;
     padding: 10px;
-    position: relative;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 50%);
+    background-color: rgba(0, 0, 0, 0.186);
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .ad a {
-    _position: absolute;
+    position: absolute;
 }
 
-.about_ad {
-    _position: absolute;
+.about-ad {
+    position: absolute;
+    max-width: 550px;
     left: 250px;
-    top: 0;
+    margin-top: 8px;
+}
+
+.about-ad .heading {
+    font-weight: bold;
+    font-size: 23px;
+    color: #5e9a1a;
+}
+
+.heading, .phone-number, .description {
+    margin-top: 5px;
 }
 
 
+.content {
+    position: relative;
+    margin: auto;
+    margin-top: 160px;
+    width: 40%;
+    min-height: 250px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 75%);
+    background-color: rgba(0, 0, 0, 0.186);
+    border-radius: 10px;
+    font-size: 20px;
+}
 
+.single-ad-heading {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 23px;
+    color: #5e9a1a;
 
+}
 
+.single-ad-photo {
+    position: absolute;
+    left: 50px;
+    
+}
 
+.single-ad-content {
+    position: absolute;
+    right: 50px;
+}
 
+.single-ad-text, .single-ad-phone, .single-ad-author, .single-ad-city {
+    margin-top: 7px;
+}
 
+.single-ad-date {
+    margin-top: 20px;
+    font-size: 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.single-ad-author {
+    font-weight: bold;
+}
 
 
 

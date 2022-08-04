@@ -1,7 +1,6 @@
 </div>
     <?php
     foreach($ads as $ad) {
-        
     ?>    
         <div class="ad">
             <a href="index.php?page=single-ad&id=<?php echo $ad['id']?>">
@@ -15,20 +14,15 @@
 
                 } 
                 ?>
-            </a>
-
-            <div class="ad_city_name">
-                <?php echo $ad['city_id']; ?>
-            </div>
-            
+            </a>        
         
-            <div class="about_ad">
+            <div class="about-ad">
                 <div class="heading">
                     <?php
                     echo $ad['heading']; 
                     ?>
                 </div>
-                <div class="phone_number">
+                <div class="phone-number">
                     <?php
                     echo $ad['phone_number']; 
                     ?>

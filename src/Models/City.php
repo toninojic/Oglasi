@@ -29,6 +29,5 @@ class City extends Common {
         $user = mysqli_fetch_assoc($result);
 
         return $user;  
-        
     }
 }

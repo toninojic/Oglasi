@@ -9,6 +9,7 @@ use Toni\ZavrsniProjekat\Controllers\Contact;
 use Toni\ZavrsniProjekat\Controllers\Login;
 use Toni\ZavrsniProjekat\Controllers\Register;
 use Toni\ZavrsniProjekat\Controllers\PostAd;
+use Toni\ZavrsniProjekat\Controllers\SingleAd;
 use Toni\ZavrsniProjekat\Controllers\Logout;
 use Toni\ZavrsniProjekat\Services\Auth\Security;
 
@@ -54,6 +55,12 @@ switch($_GET['page']) {
         } else {
             $page->storeUser();
         }
+        break;
+
+
+    case "single-ad":
+        $page = new SingleAd();
+        $page->index();
         break;
            
     case "login":

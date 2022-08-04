@@ -36,14 +36,36 @@ class Ads extends Common {
         $sql = "SELECT * FROM `ads`;";
 
         $result = $this->query($sql);
-
-        $ads = [];
+        
         while($row = mysqli_fetch_assoc($result)) {
             $ads[] = $row;
         }
 
-        return $ads;   
+        return $ads;
     }
 
+
+    public function getAdById($id) {
+
+        $sql = "SELECT * FROM `ads` WHERE id = '$id';";
+        
+        
+        $result = $this->query($sql);
+
+        $ad = mysqli_fetch_assoc($result);
+
+        $users = new Users();
+        $user = $users->getOneById($ad['user_id']);
+
+        $ad['user_full_name'] = $user['full_name']; // append new array member
+
+
+        $city = new City();
+        $city = $city->getOneById($ad['city_id']);
+        
+        $ad['city_name'] = $city['city']; // append new array member
+
+        return $ad;
+    }
 
 }
