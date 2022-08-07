@@ -7,6 +7,7 @@ namespace Toni\ZavrsniProjekat\Controllers;
 use Toni\ZavrsniProjekat\Services\Auth\Security;
 use Toni\ZavrsniProjekat\Models\Ads;
 use Toni\ZavrsniProjekat\Models\City;
+use Toni\ZavrsniProjekat\Models\Categories;
 use Toni\ZavrsniProjekat\Request\AdForm;
 
 
@@ -16,9 +17,9 @@ class PostAd {
 
         $securityService = new Security();
         $cityModel = new City();
+        $categoriesModel = new Categories();
 
         $errors = '';
-
 
         include('src/Views/header.php');
         include('src/Views/post-ad.php');
@@ -32,8 +33,11 @@ class PostAd {
 
         $adValidation = new AdForm(); 
         $cityModel = new City();
+        $categoriesModel = new Categories();
+
 
         if(count($_POST) > 0) {
+
             $errors = $adValidation->validateAdForm($_POST['heading'], $_POST['phoneNumber'], $_POST['description'], $_FILES['file']['size']);
 
 
@@ -42,6 +46,7 @@ class PostAd {
                 $heading = $_POST['heading'];
                 $phoneNumber = $_POST['phoneNumber'];
                 $description = $_POST['description'];
+                $categoryId = $_POST['category']; 
                 $cityId = $_POST['city']; 
 
                 if(!empty($_FILES['file']['tmp_name']))  {
@@ -51,7 +56,7 @@ class PostAd {
                 }   
 
                 $adModel = new Ads();
-                $adModel->store($username, $heading, $phoneNumber, $description, $cityId, $image);
+                $adModel->store($username, $heading, $phoneNumber, $description, $categoryId, $cityId, $image);
 
                 Header('Location: index.php'); // do redirect
             } else {

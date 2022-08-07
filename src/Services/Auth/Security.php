@@ -18,21 +18,6 @@ class Security {
         return false;        
     }
 
-
-    
-/*     public function validatePassword(): bool {
-
-        if(strlen($_POST['password']) < 6) {
-            return false;
-        }
-
-        if($_POST['password'] != $_POST['passwordConfirm']) {
-            return false;
-        }
-
-        return true;
-    }   */  
-
     public function isLoggedIn() {
 
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {

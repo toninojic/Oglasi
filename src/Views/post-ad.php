@@ -9,16 +9,28 @@
 
         <p>Description:</p>
         <textarea name="description" placeholder="Enter your ad content" class="new-ad"></textarea>
-
-        <select name="city">
-                <?php
-                foreach($cityModel->getAll() as $city) {
-                ?>
-                    <option value="<?php echo $city['id']?>"><?php echo $city['city']?></option>
-                <?php
-                }
-                ?>
-        </select>  
+        <div class="custom-select">
+            <select name="city">
+                    <?php
+                    foreach($cityModel->getAll() as $city) {
+                    ?>
+                        <option value="<?php echo $city['id']?>"><?php echo $city['city']?></option>
+                    <?php
+                    }
+                    ?>
+            </select> 
+            
+            <select name="category">
+                    <?php
+                    foreach($categoriesModel->getAll() as $category) {
+                    ?>
+                        <option value="<?php echo $category['id']?>"><?php echo $category['category']?></option>
+                    <?php
+                    }
+                    ?>
+            </select> 
+        </div>
+  
 
         <p>Photo:</p>
         <input type="file" name="file" id="file" class="inputfile" />

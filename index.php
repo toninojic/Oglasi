@@ -77,6 +77,11 @@ switch($_GET['page']) {
         $page->index();
         break;
 
+    case "filter":
+        $page = new Home();
+        $page->filter();
+        break;
+
     default:
         $page = new Home();
         $page->index();

@@ -1,4 +1,14 @@
 </div>
+        <div class="category-filter">
+            <a href="index.php?page=filterd&category_id=0">All categories</a>
+            <?php
+            foreach($categoriesModel->getAll() as $category) {
+            ?>
+                <a href="index.php?page=filter&category_id=<?php echo $category['id']?>"><?php echo $category['category']?></a>
+            <?php
+            }
+            ?>
+        </div>
     <?php
     foreach($ads as $ad) {
     ?>    
