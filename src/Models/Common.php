@@ -11,8 +11,7 @@ class Common {
     
 
         if (mysqli_connect_errno()) {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            exit();
+            throw new DatabaseException("Failed to connect to MySQL: " . mysqli_connect_error());  
         }
 
         return $connection; 
@@ -25,7 +24,7 @@ class Common {
     
             $result = mysqli_query($connection, $sql);
             if(!$result) {
-                die('Error has occurred in SQL query');
+                throw new DatabaseException('Error has occurred in SQL query');
             }
             
             return $result;

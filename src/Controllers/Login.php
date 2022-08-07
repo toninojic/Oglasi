@@ -37,7 +37,7 @@ class Login {
         } else {
 
             // login failed
-            $errors = 'You have entered wrong username/password';        
+            $errors = 'You have entered wrong username or password';        
 
             include('src/Views/header.php');
             include('src/Views/login.php');

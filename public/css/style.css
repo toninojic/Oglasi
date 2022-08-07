@@ -105,6 +105,12 @@ body {
     color: #52a11d;
 }
 
+.error {
+    padding: 20px;
+    text-align: center;
+    font-size: 19px;
+}
+
 .ad {
     position: relative;
     margin-left: 30%;
@@ -140,6 +146,11 @@ body {
     margin-top: 5px;
 }
 
+.text {
+    text-align: center;
+    margin: 25px;
+    text-transform: uppercase;
+}
 
 .content {
     position: relative;
@@ -200,7 +211,7 @@ body {
 }
 
 
-.featured-ads {
+/* .featured-ads {
     position: relative;
     margin: auto;
     margin-top: 160px;
@@ -214,7 +225,7 @@ body {
     font-size: 20px;
 }
 
-
+ */
 .contact-form {
     margin: auto;
     margin-top: 150px;
